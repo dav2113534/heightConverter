@@ -52,6 +52,11 @@ public class heightconverter extends javax.swing.JFrame {
         convertBtn.setBackground(new java.awt.Color(255, 0, 0));
         convertBtn.setText("Convert to");
         convertBtn.setToolTipText("");
+        convertBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                convertBtnActionPerformed(evt);
+            }
+        });
 
         clearBtn.setBackground(new java.awt.Color(0, 51, 255));
         clearBtn.setForeground(new java.awt.Color(255, 255, 255));
@@ -148,9 +153,7 @@ public class heightconverter extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    // This might create an error!!!!!!!!!
-    // Error Possible
-    // Pay attention
+    
     private void exitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtnActionPerformed
         System.exit(0);
     }//GEN-LAST:event_exitBtnActionPerformed
@@ -160,6 +163,14 @@ public class heightconverter extends javax.swing.JFrame {
        InchTxtField.setText("");
        cmTxtField.setText("");
     }//GEN-LAST:event_clearBtnActionPerformed
+
+    private void convertBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertBtnActionPerformed
+        double feet, inches, centimeters; 
+        
+        feet = Double.parseDouble(ftTxtField.getText());
+        centimeters = Double.parseDouble(cmTxtField.getText());
+        inches = Double.parseDouble(InchTxtField.getText());
+    }//GEN-LAST:event_convertBtnActionPerformed
 
     /**
      * @param args the command line arguments
