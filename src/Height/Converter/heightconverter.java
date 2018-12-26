@@ -56,6 +56,11 @@ public class heightconverter extends javax.swing.JFrame {
         clearBtn.setBackground(new java.awt.Color(0, 51, 255));
         clearBtn.setForeground(new java.awt.Color(255, 255, 255));
         clearBtn.setText("Clear");
+        clearBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearBtnActionPerformed(evt);
+            }
+        });
 
         exitBtn.setBackground(new java.awt.Color(0, 51, 204));
         exitBtn.setForeground(new java.awt.Color(255, 255, 255));
@@ -147,8 +152,14 @@ public class heightconverter extends javax.swing.JFrame {
     // Error Possible
     // Pay attention
     private void exitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitBtnActionPerformed
-        // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_exitBtnActionPerformed
+
+    private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtnActionPerformed
+       ftTxtField.setText("");  
+       InchTxtField.setText("");
+       cmTxtField.setText("");
+    }//GEN-LAST:event_clearBtnActionPerformed
 
     /**
      * @param args the command line arguments
