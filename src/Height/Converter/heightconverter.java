@@ -168,8 +168,9 @@ public class heightconverter extends javax.swing.JFrame {
         double feet, inches, centimeters; 
         
         feet = Double.parseDouble(ftTxtField.getText());
-        centimeters = Double.parseDouble(cmTxtField.getText());
         inches = Double.parseDouble(InchTxtField.getText());
+        centimeters =(feet * 12 + inches) * 2.54;
+        cmTxtField.setText(String.valueOf(centimeters));
     }//GEN-LAST:event_convertBtnActionPerformed
 
     /**
